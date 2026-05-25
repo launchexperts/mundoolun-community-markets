@@ -243,29 +243,49 @@
   .calendar .section-head { color: var(--cream-soft); }
   .calendar .section-head h2 { color: var(--cream-soft); }
   .calendar .section-head p { color: rgba(244,236,218,.7); }
-  .cal-list { display: grid; gap: 14px; }
-  .cal-row {
-    display: grid; grid-template-columns: 110px 1fr auto;
-    gap: 24px; align-items: center;
+  .cal-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  @media (max-width: 900px) { .cal-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 560px) { .cal-grid { grid-template-columns: 1fr; } }
+  .cal-card {
     background: rgba(255,255,255,.06);
-    border: 1px solid rgba(255,255,255,.1);
-    border-radius: 14px; padding: 18px 24px;
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 18px; overflow: hidden;
+    display: flex; flex-direction: column;
+    transition: transform .2s ease, box-shadow .2s ease;
   }
-  @media (max-width: 640px) {
-    .cal-row { grid-template-columns: 80px 1fr; }
-    .cal-row .cal-tag { grid-column: 2; justify-self: start; }
+  .cal-card:hover { transform: translateY(-5px); box-shadow: 0 22px 40px -22px rgba(0,0,0,.65); }
+  .cal-thumb {
+    position: relative; aspect-ratio: 4/3; overflow: hidden;
   }
-  .cal-row .cal-date {
-    font-family: 'Fraunces', serif; font-weight: 700;
-    color: var(--yellow); font-size: 1.05rem; line-height: 1.2;
+  .cal-thumb img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: transform .5s ease;
   }
-  .cal-row .cal-date span { display: block; font-size: 2rem; }
-  .cal-row h4 { color: var(--cream-soft); font-size: 1.2rem; }
-  .cal-row p { font-size: .9rem; color: rgba(244,236,218,.7); }
+  .cal-card:hover .cal-thumb img { transform: scale(1.06); }
   .cal-tag {
+    position: absolute; top: 14px; left: 14px;
     background: var(--yellow); color: var(--green-deep);
-    font-weight: 800; font-size: .76rem; text-transform: uppercase;
-    letter-spacing: .08em; padding: 6px 14px; border-radius: 999px;
+    font-weight: 800; font-size: .72rem; text-transform: uppercase;
+    letter-spacing: .1em; padding: 6px 12px; border-radius: 999px;
+    box-shadow: 0 6px 14px -6px rgba(0,0,0,.4);
+  }
+  .cal-body { padding: 20px 22px 24px; }
+  .cal-card .cal-date {
+    display: flex; align-items: baseline; gap: 8px;
+    font-family: 'Fraunces', serif; font-weight: 700;
+    color: var(--yellow);
+  }
+  .cal-card .cal-date .m { font-size: 1rem; letter-spacing: .04em; }
+  .cal-card .cal-date .d { font-size: 1.9rem; line-height: 1; }
+  .cal-card h4 {
+    color: var(--cream-soft); font-size: 1.2rem;
+    margin: 4px 0 6px;
+  }
+  .cal-card p {
+    font-size: .9rem; color: rgba(244,236,218,.78);
   }
 
   /* ---------- Gallery ---------- */
@@ -550,37 +570,73 @@
       <p>We run on the first Sunday of every month, rain, hail or shine
         (well — mostly shine). Here are our 2026 dates.</p>
     </div>
-    <div class="cal-list">
-      <div class="cal-row">
-        <div class="cal-date">Jul<span>05</span></div>
-        <div><h4>Launch Market</h4><p>Our grand opening — meet the makers, growers and food trucks, with live music on the green.</p></div>
-        <div class="cal-tag">Launch</div>
-      </div>
-      <div class="cal-row">
-        <div class="cal-date">Aug<span>02</span></div>
-        <div><h4>Winter Warmers Market</h4><p>Hot soup, fresh sourdough and citrus straight from the orchard.</p></div>
-        <div class="cal-tag">Produce</div>
-      </div>
-      <div class="cal-row">
-        <div class="cal-date">Sep<span>06</span></div>
-        <div><h4>Spring Garden Market</h4><p>Seedling swap, plant clinic and a special focus on our plant stalls.</p></div>
-        <div class="cal-tag">Plants</div>
-      </div>
-      <div class="cal-row">
-        <div class="cal-date">Oct<span>04</span></div>
-        <div><h4>Wildflower &amp; Makers Market</h4><p>Extended craft pavilion with visiting Scenic Rim artisans.</p></div>
-        <div class="cal-tag">Makers</div>
-      </div>
-      <div class="cal-row">
-        <div class="cal-date">Nov<span>01</span></div>
-        <div><h4>Spring Harvest Market</h4><p>Strawberries, asparagus and the best of early-season produce on show.</p></div>
-        <div class="cal-tag">Harvest</div>
-      </div>
-      <div class="cal-row">
-        <div class="cal-date">Dec<span>06</span></div>
-        <div><h4>Christmas Market</h4><p>Festive stalls, gifts from local makers, carols on the green and a visit from Santa.</p></div>
-        <div class="cal-tag">Christmas</div>
-      </div>
+    <div class="cal-grid">
+      <article class="cal-card">
+        <div class="cal-thumb">
+          <img src="images/cal-launch.jpg" alt="Grand opening of the markets" />
+          <span class="cal-tag">Launch</span>
+        </div>
+        <div class="cal-body">
+          <div class="cal-date"><span class="m">Jul</span><span class="d">05</span></div>
+          <h4>Launch Market</h4>
+          <p>Our grand opening — meet the makers, growers and food trucks, with live music on the green.</p>
+        </div>
+      </article>
+      <article class="cal-card">
+        <div class="cal-thumb">
+          <img src="images/cal-winter.jpg" alt="Warm soup and bread on a winter market day" />
+          <span class="cal-tag">Produce</span>
+        </div>
+        <div class="cal-body">
+          <div class="cal-date"><span class="m">Aug</span><span class="d">02</span></div>
+          <h4>Winter Warmers Market</h4>
+          <p>Hot soup, fresh sourdough and citrus straight from the orchard.</p>
+        </div>
+      </article>
+      <article class="cal-card">
+        <div class="cal-thumb">
+          <img src="images/cal-plants.jpg" alt="A plant and seedling stall" />
+          <span class="cal-tag">Plants</span>
+        </div>
+        <div class="cal-body">
+          <div class="cal-date"><span class="m">Sep</span><span class="d">06</span></div>
+          <h4>Spring Garden Market</h4>
+          <p>Seedling swap, plant clinic and a special focus on our plant stalls.</p>
+        </div>
+      </article>
+      <article class="cal-card">
+        <div class="cal-thumb">
+          <img src="images/cal-makers.jpg" alt="Wildflowers and craft goods at a market stall" />
+          <span class="cal-tag">Makers</span>
+        </div>
+        <div class="cal-body">
+          <div class="cal-date"><span class="m">Oct</span><span class="d">04</span></div>
+          <h4>Wildflower &amp; Makers Market</h4>
+          <p>Extended craft pavilion with visiting Scenic Rim artisans.</p>
+        </div>
+      </article>
+      <article class="cal-card">
+        <div class="cal-thumb">
+          <img src="images/cal-harvest.jpg" alt="Strawberries and asparagus at a produce stall" />
+          <span class="cal-tag">Harvest</span>
+        </div>
+        <div class="cal-body">
+          <div class="cal-date"><span class="m">Nov</span><span class="d">01</span></div>
+          <h4>Spring Harvest Market</h4>
+          <p>Strawberries, asparagus and the best of early-season produce on show.</p>
+        </div>
+      </article>
+      <article class="cal-card">
+        <div class="cal-thumb">
+          <img src="images/cal-christmas.jpg" alt="A festive Christmas market with fairy lights" />
+          <span class="cal-tag">Christmas</span>
+        </div>
+        <div class="cal-body">
+          <div class="cal-date"><span class="m">Dec</span><span class="d">06</span></div>
+          <h4>Christmas Market</h4>
+          <p>Festive stalls, gifts from local makers, carols on the green and a visit from Santa.</p>
+        </div>
+      </article>
     </div>
   </div>
 </section>
