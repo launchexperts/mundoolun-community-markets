@@ -311,14 +311,43 @@
   .vendor-box h2 { color: var(--cream-soft); font-size: clamp(1.9rem,4vw,2.7rem); }
   .vendor-box p { margin: 14px 0 0; color: rgba(255,253,247,.9); }
   .vendor-perks { list-style: none; margin-top: 20px; display: grid; gap: 8px; }
-  .vendor-perks li { font-weight: 700; }
+  .vendor-perks li { font-weight: 700; font-size: 1.02rem; }
   .vendor-perks li::before { content: "✦  "; color: var(--yellow); }
-  .vendor-action { text-align: center; }
-  .vendor-action .price {
-    font-family: 'Fraunces', serif; font-size: 3rem; font-weight: 700;
-    color: var(--cream-soft);
+  .vendor-reqs {
+    margin-top: 24px; padding-top: 20px;
+    border-top: 1px solid rgba(255,253,247,.28);
   }
-  .vendor-action .price span { font-size: 1rem; font-weight: 600; }
+  .vendor-reqs h4 {
+    color: var(--yellow); font-size: .82rem;
+    text-transform: uppercase; letter-spacing: .14em;
+    margin-bottom: 10px;
+  }
+  .vendor-reqs p {
+    font-size: .94rem; color: rgba(255,253,247,.92);
+    margin-bottom: 6px;
+  }
+  .vendor-action { text-align: center; }
+  .launch-date {
+    background: var(--cream-soft); color: var(--green-deep);
+    border-radius: 18px; padding: 18px 26px;
+    display: inline-block;
+    box-shadow: 0 10px 22px -10px rgba(0,0,0,.35);
+  }
+  .launch-date .ld-day {
+    font-weight: 800; letter-spacing: .18em;
+    font-size: .78rem; color: var(--tomato);
+  }
+  .launch-date .ld-num {
+    font-family: 'Fraunces', serif; font-size: 3.4rem;
+    font-weight: 700; line-height: 1; margin: 2px 0;
+    color: var(--green-deep);
+  }
+  .launch-date .ld-month {
+    font-weight: 800; letter-spacing: .18em;
+    font-size: .78rem; color: var(--green-dark);
+  }
+  .vendor-action .label { margin: 14px 0 4px; font-weight: 800; font-size: 1rem; }
+  .vendor-action .setup { font-size: .86rem; opacity: .9; margin-bottom: 18px; }
 
   /* ---------- Visitor info ---------- */
   .visit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: stretch; }
@@ -434,12 +463,12 @@
       </div>
       <div class="next-card">
         <div class="date-box">
-          <div class="d">07</div>
-          <div class="m">Jun</div>
+          <div class="d">05</div>
+          <div class="m">Jul</div>
         </div>
         <div class="info">
-          <b>Next Market Day</b>
-          <span>Saturday · 8:00am – 1:00pm · Mundoolun Reserve</span>
+          <b>Launch Market Day</b>
+          <span>Sunday · 5 July 2026 · Mundoolun Park</span>
         </div>
       </div>
     </div>
@@ -453,18 +482,18 @@
       <span class="eyebrow">Our Story</span>
       <h2 style="font-size:clamp(2rem,4vw,2.9rem);margin:10px 0 14px;">
         A market grown by the community, for the community.</h2>
-      <p style="color:var(--muted);">The Mundoolun Community Markets began as a handful
-        of trestle tables under the old fig tree — a place for neighbours to swap
-        backyard produce and a good yarn. Today it's a thriving monthly gathering
-        that champions local farmers, artisans and small food makers from across
-        the Scenic Rim.</p>
-      <p style="color:var(--muted);margin-top:12px;">Every dollar spent here stays
-        close to home, and every stall tells a story. We're proudly run by
-        volunteers, with profits returned to local schools and landcare projects.</p>
+      <p style="color:var(--muted);">Launching Sunday 5 July 2026, the Mundoolun
+        Community Markets is a brand-new monthly gathering on the first Sunday
+        of every month — bringing together local growers, makers, plant
+        nurseries and food trucks from across the Scenic Rim.</p>
+      <p style="color:var(--muted);margin-top:12px;">It's a privately-run venture
+        with big ambitions: a 100+ stall market that becomes the place locals
+        plan their Sunday morning around. Every stall tells a story, and every
+        dollar spent here stays close to home.</p>
       <div class="about-stats">
-        <div class="stat"><b>40+</b><span>Local stalls</span></div>
-        <div class="stat"><b>11</b><span>Markets a year</span></div>
-        <div class="stat"><b>100%</b><span>Volunteer run</span></div>
+        <div class="stat"><b>100+</b><span>Stalls planned</span></div>
+        <div class="stat"><b>12</b><span>Markets a year</span></div>
+        <div class="stat"><b>1st</b><span>Sunday of the month</span></div>
       </div>
     </div>
     <div class="about-photo">
@@ -518,29 +547,39 @@
     <div class="section-head center">
       <span class="eyebrow">Mark Your Calendar</span>
       <h2>Upcoming market days</h2>
-      <p>We run on the first Saturday of the month, rain, hail or shine (well —
-        mostly shine).</p>
+      <p>We run on the first Sunday of every month, rain, hail or shine
+        (well — mostly shine). Here are our 2026 dates.</p>
     </div>
     <div class="cal-list">
       <div class="cal-row">
-        <div class="cal-date">Jun<span>07</span></div>
-        <div><h4>Winter Harvest Market</h4><p>Citrus season kicks off — plus hot soup and cider stalls.</p></div>
-        <div class="cal-tag">Next Up</div>
-      </div>
-      <div class="cal-row">
         <div class="cal-date">Jul<span>05</span></div>
-        <div><h4>Christmas in July</h4><p>Mulled wine, carols on the green and the kids' lantern walk.</p></div>
-        <div class="cal-tag">Special</div>
+        <div><h4>Launch Market</h4><p>Our grand opening — meet the makers, growers and food trucks, with live music on the green.</p></div>
+        <div class="cal-tag">Launch</div>
       </div>
       <div class="cal-row">
         <div class="cal-date">Aug<span>02</span></div>
-        <div><h4>Spring Garden Market</h4><p>Seedling swap, plant clinic and the annual scarecrow contest.</p></div>
-        <div class="cal-tag">Family</div>
+        <div><h4>Winter Warmers Market</h4><p>Hot soup, fresh sourdough and citrus straight from the orchard.</p></div>
+        <div class="cal-tag">Produce</div>
       </div>
       <div class="cal-row">
         <div class="cal-date">Sep<span>06</span></div>
+        <div><h4>Spring Garden Market</h4><p>Seedling swap, plant clinic and a special focus on our plant stalls.</p></div>
+        <div class="cal-tag">Plants</div>
+      </div>
+      <div class="cal-row">
+        <div class="cal-date">Oct<span>04</span></div>
         <div><h4>Wildflower &amp; Makers Market</h4><p>Extended craft pavilion with visiting Scenic Rim artisans.</p></div>
-        <div class="cal-tag">Markets</div>
+        <div class="cal-tag">Makers</div>
+      </div>
+      <div class="cal-row">
+        <div class="cal-date">Nov<span>01</span></div>
+        <div><h4>Spring Harvest Market</h4><p>Strawberries, asparagus and the best of early-season produce on show.</p></div>
+        <div class="cal-tag">Harvest</div>
+      </div>
+      <div class="cal-row">
+        <div class="cal-date">Dec<span>06</span></div>
+        <div><h4>Christmas Market</h4><p>Festive stalls, gifts from local makers, carols on the green and a visit from Santa.</p></div>
+        <div class="cal-tag">Christmas</div>
       </div>
     </div>
   </div>
@@ -606,18 +645,30 @@
     <div class="vendor-box">
       <div>
         <span class="eyebrow" style="color:var(--yellow);">Become a Stallholder</span>
-        <h2>Got something worth sharing? Set up a stall.</h2>
-        <p>Whether you're a grower, a baker or a maker, we'd love to have you.
-          Joining is simple and our friendly market team will help you settle in.</p>
+        <h2>We're actively seeking stallholders for our launch.</h2>
+        <p>We're building something big — a 100+ stall monthly market on
+          the first Sunday of every month. For our launch on
+          <b>Sunday 5 July 2026</b>, we're especially looking for:</p>
         <ul class="vendor-perks">
-          <li>Affordable site fees — no lock-in contracts</li>
-          <li>Marquee &amp; trestle hire available on the day</li>
-          <li>Promotion across our socials and newsletter</li>
+          <li>Fresh produce stalls</li>
+          <li>Plant &amp; garden stalls</li>
+          <li>Food trucks</li>
         </ul>
+        <div class="vendor-reqs">
+          <h4>What you'll need</h4>
+          <p>All stallholders must hold <b>$20 million Public Liability Insurance</b>.</p>
+          <p>Food trucks also require a current <b>Food Licence</b> and a
+            <b>permit to operate at Mundoolun Park</b> from Logan City Council.</p>
+        </div>
       </div>
       <div class="vendor-action">
-        <div class="price">$35<span> / market</span></div>
-        <p style="margin:6px 0 18px;">Standard 3m × 3m site</p>
+        <div class="launch-date">
+          <div class="ld-day">Sunday</div>
+          <div class="ld-num">05</div>
+          <div class="ld-month">Jul 2026</div>
+        </div>
+        <p class="label">Launch Market Day</p>
+        <p class="setup">Bump in from 4:00am · vehicles cleared by 6:45am</p>
         <a href="#contact" class="btn btn-yellow">Apply for a Stall</a>
       </div>
     </div>
@@ -635,11 +686,11 @@
       <div class="info-list">
         <div class="info-row">
           <div class="ico">📍</div>
-          <div><h4>Location</h4><p>Mundoolun Reserve, Albert River Road, Mundoolun QLD 4285.</p></div>
+          <div><h4>Location</h4><p>Mundoolun Park, Mundoolun QLD 4285 (Logan City).</p></div>
         </div>
         <div class="info-row">
           <div class="ico">🕗</div>
-          <div><h4>Opening Hours</h4><p>First Saturday of the month, 8:00am – 1:00pm.</p></div>
+          <div><h4>Opening Hours</h4><p>First Sunday of every month, 7:00am – 1:00pm. Launching 5 July 2026.</p></div>
         </div>
         <div class="info-row">
           <div class="ico">🚗</div>
@@ -690,8 +741,8 @@
           <img src="images/logo.jpg" alt="Mundoolun Community Markets logo" />
           <b>Mundoolun<br />Community Markets</b>
         </div>
-        <p style="font-size:.9rem;">A volunteer-run monthly market celebrating the
-          growers, makers and music of the Scenic Rim.</p>
+        <p style="font-size:.9rem;">A new monthly market on the first Sunday of every
+          month, celebrating the growers, makers and food trucks of the Scenic Rim.</p>
       </div>
       <div>
         <h4>Explore</h4>
@@ -709,14 +760,14 @@
       </div>
       <div>
         <h4>Visit</h4>
-        <a href="#visit">Mundoolun Reserve</a>
-        <a href="#visit">Albert River Road</a>
+        <a href="#visit">Mundoolun Park</a>
         <a href="#visit">Mundoolun QLD 4285</a>
+        <a href="#visit">Logan City</a>
         <a href="#contact">hello@mundoolunmarkets.org.au</a>
       </div>
     </div>
     <div class="foot-bottom">
-      <span>© 2026 The Mundoolun Community Markets. Made with care by local volunteers.</span>
+      <span>© 2026 The Mundoolun Community Markets. A privately-run market in the Scenic Rim.</span>
       <div class="socials">
         <a href="#" aria-label="Facebook">f</a>
         <a href="#" aria-label="Instagram">ig</a>
