@@ -323,11 +323,20 @@
     background: var(--tomato);
     color: var(--cream-soft);
     border-radius: 26px;
-    padding: 56px 50px;
-    display: grid; grid-template-columns: 1.4fr 1fr;
-    gap: 40px; align-items: center;
+    display: grid; grid-template-columns: 1fr 1.5fr 1fr;
+    gap: 0; align-items: stretch;
+    overflow: hidden;
   }
-  @media (max-width: 780px) { .vendor-box { grid-template-columns: 1fr; text-align: center; } }
+  .vendor-image { overflow: hidden; min-height: 480px; }
+  .vendor-image img {
+    width: 100%; height: 100%;
+    object-fit: cover; display: block;
+  }
+  .vendor-content { padding: 50px 40px; align-self: center; }
+  @media (max-width: 880px) {
+    .vendor-box { grid-template-columns: 1fr; text-align: center; }
+    .vendor-image { min-height: 0; aspect-ratio: 16/9; }
+  }
   .vendor-box h2 { color: var(--cream-soft); font-size: clamp(1.9rem,4vw,2.7rem); }
   .vendor-box p { margin: 14px 0 0; color: rgba(255,253,247,.9); }
   .vendor-perks { list-style: none; margin-top: 20px; display: grid; gap: 8px; }
@@ -346,7 +355,7 @@
     font-size: .94rem; color: rgba(255,253,247,.92);
     margin-bottom: 6px;
   }
-  .vendor-action { text-align: center; }
+  .vendor-action { text-align: center; padding: 50px 40px; align-self: center; }
   .launch-date {
     background: var(--cream-soft); color: var(--green-deep);
     border-radius: 18px; padding: 18px 26px;
@@ -574,7 +583,6 @@
       <article class="cal-card">
         <div class="cal-thumb">
           <img src="images/cal-launch.jpg" alt="Grand opening of the markets" />
-          <span class="cal-tag">Launch</span>
         </div>
         <div class="cal-body">
           <div class="cal-date"><span class="m">Jul</span><span class="d">05</span></div>
@@ -585,7 +593,6 @@
       <article class="cal-card">
         <div class="cal-thumb">
           <img src="images/cal-winter.jpg" alt="Warm soup and bread on a winter market day" />
-          <span class="cal-tag">Produce</span>
         </div>
         <div class="cal-body">
           <div class="cal-date"><span class="m">Aug</span><span class="d">02</span></div>
@@ -596,7 +603,6 @@
       <article class="cal-card">
         <div class="cal-thumb">
           <img src="images/cal-plants.jpg" alt="A plant and seedling stall" />
-          <span class="cal-tag">Plants</span>
         </div>
         <div class="cal-body">
           <div class="cal-date"><span class="m">Sep</span><span class="d">06</span></div>
@@ -607,7 +613,6 @@
       <article class="cal-card">
         <div class="cal-thumb">
           <img src="images/cal-makers.jpg" alt="Wildflowers and craft goods at a market stall" />
-          <span class="cal-tag">Makers</span>
         </div>
         <div class="cal-body">
           <div class="cal-date"><span class="m">Oct</span><span class="d">04</span></div>
@@ -618,7 +623,6 @@
       <article class="cal-card">
         <div class="cal-thumb">
           <img src="images/cal-harvest.jpg" alt="Strawberries and asparagus at a produce stall" />
-          <span class="cal-tag">Harvest</span>
         </div>
         <div class="cal-body">
           <div class="cal-date"><span class="m">Nov</span><span class="d">01</span></div>
@@ -629,7 +633,6 @@
       <article class="cal-card">
         <div class="cal-thumb">
           <img src="images/cal-christmas.jpg" alt="A festive Christmas market with fairy lights" />
-          <span class="cal-tag">Christmas</span>
         </div>
         <div class="cal-body">
           <div class="cal-date"><span class="m">Dec</span><span class="d">06</span></div>
@@ -699,7 +702,10 @@
 <section class="vendor" id="stallholder">
   <div class="wrap">
     <div class="vendor-box">
-      <div>
+      <div class="vendor-image">
+        <img src="images/vendor-stallholder.jpg" alt="A proud stallholder at their market stall" />
+      </div>
+      <div class="vendor-content">
         <span class="eyebrow" style="color:var(--yellow);">Become a Stallholder</span>
         <h2>We're actively seeking stallholders for our launch.</h2>
         <p>We're building something big — a 100+ stall monthly market on
