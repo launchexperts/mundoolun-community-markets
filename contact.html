@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact · The Mundoolun Community Markets</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">
+      <img src="images/logo.jpg" alt="The Mundoolun Community Markets" />
+    </a>
+    <nav class="links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="markets.html">Market Days</a>
+      <a href="stallholders.html">Stallholders</a>
+      <a href="visit.html">Visit</a>
+      <a href="contact.html" class="active">Contact</a>
+      <a href="stallholders.html" class="btn btn-yellow" style="padding:10px 22px;">Book a Stall</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== PAGE HERO ===== -->
+<section class="page-hero" style="--page-hero-bg: url('images/gallery-coffee.jpg');">
+  <div class="bunting" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+  <div class="wrap">
+    <span class="eyebrow">Get in Touch</span>
+    <h1>We'd love to hear from you.</h1>
+    <p class="lead">General enquiries, media, partnerships, or just saying hello —
+      drop us a line and we'll come back to you within a couple of days.</p>
+  </div>
+</section>
+
+<!-- ===== FORM + DETAILS ===== -->
+<section>
+  <div class="wrap contact-grid">
+    <form class="form-mock" onsubmit="return false;" aria-label="Contact form">
+      <h3>Send us a message</h3>
+      <p class="form-intro">All fields are indicative — the live form will be served from
+        GoHighLevel.</p>
+
+      <div class="form-row">
+        <div class="form-field">
+          <label for="c-name">Your name</label>
+          <input type="text" id="c-name" placeholder="First &amp; last" />
+        </div>
+        <div class="form-field">
+          <label for="c-email">Email</label>
+          <input type="email" id="c-email" placeholder="you@example.com" />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-field">
+          <label for="c-phone">Phone (optional)</label>
+          <input type="tel" id="c-phone" placeholder="04XX XXX XXX" />
+        </div>
+        <div class="form-field">
+          <label for="c-topic">What's your enquiry about?</label>
+          <select id="c-topic">
+            <option>General enquiry</option>
+            <option>Becoming a stallholder</option>
+            <option>Media / press</option>
+            <option>Partnerships / sponsorship</option>
+            <option>Community / school groups</option>
+            <option>Something else</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-row single">
+        <div class="form-field">
+          <label for="c-message">Your message</label>
+          <textarea id="c-message" placeholder="How can we help?"></textarea>
+        </div>
+      </div>
+
+      <label class="form-check">
+        <input type="checkbox" />
+        <span>I'm happy to be contacted about future market days and news.</span>
+      </label>
+
+      <div class="form-submit">
+        <button type="submit" class="btn btn-yellow">Send Message</button>
+      </div>
+    </form>
+
+    <div>
+      <div class="contact-card" style="margin-bottom:24px;">
+        <h3>Direct contact</h3>
+        <div class="info-list">
+          <div class="info-row">
+            <div class="ico"><svg class="icon" aria-hidden="true"><use href="icons.svg#mail"/></svg></div>
+            <div><h4>Email</h4><p><a href="mailto:hello@mundoolunmarkets.org.au" style="color:var(--tomato);font-weight:700;">hello@mundoolunmarkets.org.au</a></p></div>
+          </div>
+          <div class="info-row">
+            <div class="ico"><svg class="icon" aria-hidden="true"><use href="icons.svg#map-pin"/></svg></div>
+            <div><h4>Location</h4><p>Mundoolun Park, Mundoolun QLD 4285</p></div>
+          </div>
+          <div class="info-row">
+            <div class="ico"><svg class="icon" aria-hidden="true"><use href="icons.svg#phone"/></svg></div>
+            <div><h4>Social</h4><p>Follow @mundoolunmarkets for market reminders &amp; updates.</p></div>
+          </div>
+          <div class="info-row">
+            <div class="ico"><svg class="icon" aria-hidden="true"><use href="icons.svg#timer"/></svg></div>
+            <div><h4>Response Time</h4><p>We aim to reply within 2 business days.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout green">
+        <h4>Looking to apply for a stall?</h4>
+        <p>Use the dedicated <a href="stallholders.html#apply" style="color:var(--tomato);font-weight:700;">Stallholder
+          enquiry form</a> instead — it captures the right info for our team.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MAP ===== -->
+<section class="about">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow">Find Us</span>
+      <h2>Mundoolun Park</h2>
+    </div>
+    <div class="map" style="min-height:420px;">
+      <iframe
+        title="Map showing Mundoolun Park"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=153.043%2C-27.891%2C153.103%2C-27.841&amp;layer=mapnik&amp;marker=-27.866%2C153.073"
+        loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        style="min-height:420px;"></iframe>
+      <a class="map-link" href="https://www.openstreetmap.org/?mlat=-27.866&amp;mlon=153.073#map=14/-27.866/153.073" target="_blank" rel="noopener">View larger map</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA BANNER ===== -->
+<section class="cta-banner">
+  <div class="wrap">
+    <h2>Stay in the loop.</h2>
+    <p>Sign up for monthly reminders, stall news and weather updates.</p>
+    <form class="news-form" onsubmit="return false;" style="margin-bottom:14px;">
+      <input type="email" placeholder="your@email.com" aria-label="Email address" />
+      <button class="btn btn-yellow" type="submit">Sign Me Up</button>
+    </form>
+    <p style="font-size:.86rem;color:rgba(244,236,218,.7);">
+      <em>Newsletter signup will also be served via GoHighLevel.</em>
+    </p>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          <img src="images/logo.jpg" alt="Mundoolun Community Markets logo" />
+          <b>Mundoolun<br />Community Markets</b>
+        </div>
+        <p style="font-size:.9rem;">A new monthly market on the first Sunday of every
+          month, celebrating the growers, makers and food trucks of the Scenic Rim.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a href="about.html">About Us</a>
+        <a href="markets.html">Market Days</a>
+        <a href="visit.html">Plan Your Visit</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h4>Get Involved</h4>
+        <a href="stallholders.html">Become a Stallholder</a>
+        <a href="stallholders.html#requirements">Requirements</a>
+        <a href="stallholders.html#apply">Apply Now</a>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <a href="visit.html">Mundoolun Park</a>
+        <a href="visit.html">Mundoolun QLD 4285</a>
+        <a href="visit.html#faqs">FAQs</a>
+        <a href="mailto:hello@mundoolunmarkets.org.au">hello@mundoolunmarkets.org.au</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 The Mundoolun Community Markets. A privately-run market in the Scenic Rim.</span>
+      <div class="socials">
+        <a href="#" aria-label="Facebook"><svg class="icon" aria-hidden="true"><use href="icons.svg#facebook"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg class="icon" aria-hidden="true"><use href="icons.svg#instagram"/></svg></a>
+        <a href="mailto:hello@mundoolunmarkets.org.au" aria-label="Email"><svg class="icon" aria-hidden="true"><use href="icons.svg#mail"/></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
